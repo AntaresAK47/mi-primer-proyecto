@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antaresak47.github.io/mi-primer-proyecto/sitemap.xml
