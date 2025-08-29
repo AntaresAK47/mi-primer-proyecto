@@ -1,0 +1,115 @@
+/* ───────── Variables y reset ───────── */
+:root {
+  --bg: #f4f6fb;
+  --text: #2a2a2a;
+  --primary: #0077b6;
+  --primary-700: #005b8a;
+  --accent: #0096c7;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --container: 1100px;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Contenedor general */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+/* ───────── Header + Nav ───────── */
+.site-header { background: var(--primary); color: #fff; }
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-2);
+}
+.site-header h1 {
+  font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
+  font-weight: 800;
+}
+
+.nav { list-style: none; display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.nav a { color: #fff; text-decoration: none; font-weight: 600; }
+.nav a:hover, .nav a:focus { text-decoration: underline; }
+
+/* ───────── Main + tarjetas ───────── */
+main.container { padding: var(--space-4) var(--space-2); }
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.card h2 {
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+  font-size: clamp(1.2rem, 0.5vw + 1rem, 1.5rem);
+}
+
+/* ───────── Botones reutilizables ───────── */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.2s ease;
+  text-decoration: none;
+}
+.btn:hover { filter: brightness(0.95); }
+.btn:active { transform: translateY(1px); }
+
+/* ───────── Footer ───────── */
+.site-footer { background: var(--primary); color: #fff; }
+.site-footer .container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-3) var(--space-2);
+}
+.site-footer p { opacity: 0.95; }
+
+/* ───────── Accesibilidad ───────── */
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto; height: auto;
+  padding: 0.5rem 1rem;
+  background: #000; color: #fff;
+}
+
+/* ───────── Responsive ───────── */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  main.container { padding-top: var(--space-3); }
+}
