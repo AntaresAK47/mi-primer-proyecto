@@ -1,58 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de Antares: proyectos y aprendizaje de desarrollo web moderno." />
-  <title>Antares | Mi Primera Página</title>
-
-  <!-- Tipografía profesional -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antares — Portafolio</title>
+  <meta name="description" content="Portafolio de Antares — desarrollador web en formación. Proyectos, habilidades y contacto." />
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-
-  <!-- Favicon con emoji (simple y efectivo) -->
-  <link
-    rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚀</text></svg>"
-  />
-
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Nuestro CSS global -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
+  <!-- Header / Nav -->
   <header class="site-header">
-    <div class="container">
-      <h1>Bienvenido a mi página</h1>
-      <nav aria-label="Principal">
-        <ul class="nav">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="brand" href="index.html">Antares<span class="dot">.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Sobre mí</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="contact.html">Contacto</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
     </div>
   </header>
 
-  <main id="contenido" class="container">
-    <section id="sobre-mi" class="card">
-      <h2>Sobre mí</h2>
-      <p>Soy Antares, un apasionado de la programación que está aprendiendo a crear sitios web modernos y profesionales.</p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text" data-aos="fade-up">
+        <h1>Hola, soy <strong>Antares</strong>.</h1>
+        <p class="lead">Construyo páginas y aplicaciones web limpias, rápidas y con estilo. Bienvenido a mi portafolio.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary me-2" href="projects.html">Ver proyectos</a>
+          <a class="btn btn-outline" href="about.html">Sobre mí</a>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <!-- Aquí podrías poner una ilustración o mockup -->
+        <div class="mockup">🚀</div>
+      </div>
+    </div>
+  </section>
 
-    <section id="proyectos" class="card">
-      <h2>Proyectos</h2>
-      <p>Aquí mostraré mis proyectos más importantes en el futuro 🚀</p>
-      <a class="btn" href="#">Ver más</a>
+  <!-- Main content highlight (home quick links) -->
+  <main class="container main-grid">
+    <section class="cards-grid" data-aos="fade-up">
+      <article class="card small-card">
+        <h3>Proyectos</h3>
+        <p>Proyectos reales, código bien documentado y publicado en GitHub.</p>
+        <a class="btn btn-sm" href="projects.html">Ver</a>
+      </article>
+
+      <article class="card small-card">
+        <h3>Servicios</h3>
+        <p>Desarrollo Frontend, Integración Backend y deploy profesional.</p>
+        <a class="btn btn-sm" href="contact.html">Contactar</a>
+      </article>
+
+      <article class="card small-card">
+        <h3>Aprendizaje</h3>
+        <p>Documentación de procesos y lecciones aprendidas en cada proyecto.</p>
+        <a class="btn btn-sm" href="about.html">Leer</a>
+      </article>
     </section>
   </main>
 
-  <footer id="contacto" class="site-footer">
-    <div class="container">
-      <p>© 2025 Antares - Todos los derechos reservados</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>© 2025 Antares</div>
+      <div class="socials">
+        <a href="https://github.com/AntaresAK47" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script> AOS.init({ once: true, duration: 700 }); </script>
 </body>
 </html>
