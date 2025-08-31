@@ -6,26 +6,4 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://antaresak47.github.io/mi-primer-proyecto/#sobre-mi</loc>
-    <lastmod>2025-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://antaresak47.github.io/mi-primer-proyecto/#proyectos</loc>
-    <lastmod>2025-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://antaresak47.github.io/mi-primer-proyecto/#contacto</loc>
-    <lastmod>2025-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>
